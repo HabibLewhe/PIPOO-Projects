@@ -3,3 +3,20 @@ Tp1
 Exercice 1:
 
 5. La commande renvoie une erreur parce que le fichier selectionner n'existe plus 
+
+Exercice 2:
+
+5. le commit ne passe pas du premier coup parce qu'il manque les informations de celui qui fait le commit
+
+7. le fichier n'est plus suivi par git puisqu'il a été modifié
+
+git add : ajouter un fichier à l'index avant de le commit
+
+git restore --staged "nom du fichier": permet de supprimer les modifications apportés à un fichier en local et de ramener la version indexée
+
+git restore "nom du fichier" : permet par cointre de restaurer ton dernier commit 
+
+
+git checkout HEAD nom_fichier : permet de te renseigner sur le un fichier supprimer avec la commande rm nom-du-fichier
+
+git reset --soft HEAD 1 : permet de supprimer le dernier commit effectuer
