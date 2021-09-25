@@ -19,4 +19,8 @@ git restore "nom du fichier" : permet par cointre de restaurer ton dernier commi
 
 git checkout HEAD nom_fichier : permet de te renseigner sur le un fichier supprimer avec la commande rm nom-du-fichier
 
-git reset --soft HEAD 1 : permet de supprimer le dernier commit effectuer
+git reset --soft HEAD~1 : permet de supprimer le dernier commit effectuer
+
+git rm -r --cached <nom fichier> permet de desinxder des fichiers ou dossiers indexés avec un git add .
+
+
