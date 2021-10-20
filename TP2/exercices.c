@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+
 #include <stdbool.h>
 #include <math.h>
 #include <assert.h>
@@ -28,7 +29,7 @@ int main(){
 	printf("Entrez un nombre : ");
 	scanf("%d", &nbr);
 
-	scanf("%d", &p);
+	//scanf("%d", &p);
 
 	//premier(nbr);
 
@@ -45,10 +46,10 @@ int main(){
 
 	//printf("%d\n", facto_rec(nbr));
 
-	printf("%ld\n", coefficient(nbr,p));
+	//printf("%ld\n", coefficient(nbr,p));
 
 
-	//printf("%d\n", produit_ittr(nbr));
+	printf("%d\n", produit_ittr(nbr));
 
 	return EXIT_SUCCESS;
 }
@@ -214,7 +215,6 @@ long coefficient(int n, int p){
 	else
 		coefficient((n-1),(p-1)) + coefficient((n-1),(p));
 }
-
 
 
 int produit_ittr(int n){
