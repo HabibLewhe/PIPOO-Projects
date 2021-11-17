@@ -6,18 +6,19 @@ CFLAGS := -std=c99 -Wall -Wextra -pedantic -ggdb -Wno-abi
 LFLAGS := -lm -l
 # les options -Wno-unused-variable -Wno-unused-parameter
 # sont recommandées mais non obligatoires
-EXEC := executable
+EXECUTABLE := executable
+PASCAL := pascal
 
 # all est la cible par défaut choisie par la commande make
 # elle dépend de la règle executable, qui va être réalisée
 # en fonction de la description donnée dans la suite
 
-all : $(EXEC)
+all : $(EXECUTABLE) $(PASCAL)
  
-run : $(EXEC)
+run_executable : $(EXECUTABLE)
 	./executable
 
-run_pascal : 
+run_pascal : $(PASCAL)
 	./pascal
 
 # executable: fonctions.o main.o
@@ -41,7 +42,7 @@ run_pascal :
 # 	$(CC) $(CFLAGS) -o $@ -c $<
 
 
-executable: fonctions.o main.o
+$(EXECUTABLE): fonctions.o main.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 %.o : %.c
